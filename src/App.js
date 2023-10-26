@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchItems } from './redux/actions';
+import { fetchItems, fetchSales } from './redux/actions';
 import ProductTable from './components/ProductTable/ProductTable';
 import AddItem from './components/AddNew/AddNew';
 import { Report } from './Pages/Report';
@@ -16,6 +16,7 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchItems());
+    dispatch(fetchSales());
   }, [dispatch]);
 
  

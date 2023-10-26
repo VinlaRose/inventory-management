@@ -28,3 +28,23 @@
   h1{
     color: #45FFCA;
   }
+
+  .footer {
+    background-color: #FFFB73;
+    color: #3D30A2;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
+.footer a {
+  color: #3D30A2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

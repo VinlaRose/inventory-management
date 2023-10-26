@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import "./ProductTable.css";
 import { useDispatch } from 'react-redux';
-import { deleteItem, editItem } from '../../redux/actions'; 
+import { deleteSale, editSale } from '../../redux/actions'; 
 
-const ProductTable = ({ products }) => {
+const SalesTable = ({ products }) => {
   const dispatch = useDispatch();
   const [editingItem, setEditingItem] = useState(null);
   const [editedItemData, setEditedItemData] = useState({});
 
   const deleteButton = (id) => {
-    dispatch(deleteItem(id));
+    dispatch(deleteSale(id));
   }
 
   const editButton = (item) => {
@@ -19,7 +19,7 @@ const ProductTable = ({ products }) => {
 
   const saveButton = () => {
     
-   dispatch(editItem(editingItem._id, editedItemData));
+   dispatch(editSale(editingItem._id, editedItemData));
 
  
     setEditingItem(null);
@@ -148,4 +148,4 @@ const ProductTable = ({ products }) => {
   );
 };
 
-export default ProductTable;
+export default SalesTable;
